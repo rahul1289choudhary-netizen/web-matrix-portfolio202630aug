@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Daily Kart — everyday groceries made easy.">
+<title>Daily Kart | Everyday Essentials, Made Easy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="cursor-glow"></div>
+<div class="top-strip"><span>⚡ FAST DELIVERY</span><span>FREE DELIVERY ABOVE ₹499</span><span>🥬 FARM-FRESH PICKS DAILY</span></div>
+
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Daily Kart home"><span>DAILY</span>KART<small>EVERYDAY MADE EASY</small></a>
+    <div class="search-wrap">
+      <span>⌕</span><input id="search" type="search" placeholder="Search groceries, fruits, snacks & more..." aria-label="Search products">
+      <kbd>⌘ K</kbd>
+    </div>
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="showToast('Location selector is ready for your demo')">⌖ <span>Location</span></button>
+      <button class="nav-btn" onclick="showToast('Account area — demo interaction')">♙ <span>Account</span></button>
+      <button class="cart-btn" onclick="openCart()">🛒 <span>Cart</span><b id="cartCount">0</b></button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">☰</button>
+  </div>
+  <nav id="mobileMenu" class="mobile-menu">
+    <a href="#categories">Categories</a><a href="#deals">Today's Deals</a><a href="#products">Shop</a><a href="#fresh">Fresh Produce</a><a href="#why">Why Daily Kart</a>
+  </nav>
+  <div class="container category-nav">
+    <a href="#products">Groceries</a><a href="#fresh">Fruits & Vegetables</a><a href="#products">Dairy</a><a href="#products">Snacks</a><a href="#products">Beverages</a><a href="#products">Household</a><a href="#products">Personal Care</a>
+  </div>
+</header>
+
+<main>
+<section id="home" class="hero section-pad">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="pill"><i></i> FRESH • FAST • SIMPLE</div>
+      <h1>Your daily needs.<br><em>One Kart away.</em></h1>
+      <p>Fresh groceries, everyday essentials and everything your home needs — all in one beautiful, effortless shopping experience.</p>
+      <div class="hero-actions"><a href="#products" class="btn btn-primary magnetic">SHOP NOW <span>↗</span></a><a href="#categories" class="btn btn-ghost">EXPLORE CATEGORIES</a></div>
+      <div class="trust-row"><span>✓ Quality checked</span><span>✓ Easy returns</span><span>✓ Reliable delivery</span></div>
+    </div>
+    <div class="hero-visual reveal delay-1">
+      <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+      <div class="hero-photo"><img onerror="this.onerror=null;this.src='https://placehold.co/1100x800/eaf2e7/16372a?text=Fresh+Groceries'" src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1100&q=85" alt="Fresh groceries"></div>
+      <div class="floating-card float-one"><span>🥬</span><div><b>Farm fresh</b><small>Picked with care</small></div></div>
+      <div class="floating-card float-two"><strong>20–30</strong><small>MIN DELIVERY</small></div>
+    </div>
+  </div>
+  <div class="marquee"><div>FRESH PRODUCE ✦ EVERYDAY ESSENTIALS ✦ GREAT VALUE ✦ SIMPLE SHOPPING ✦ FRESH PRODUCE ✦ EVERYDAY ESSENTIALS ✦ GREAT VALUE ✦</div></div>
+</section>
+
+<section class="promo"><div class="container promo-inner"><div><small>THIS WEEK ONLY</small><strong>FREE DELIVERY ON ORDERS ABOVE ₹499</strong><span>Your everyday essentials delivered to your doorstep.</span></div><a href="#products">START SHOPPING <b>→</b></a></div></section>
+
+<section id="categories" class="section-pad">
+<div class="container">
+<div class="section-head reveal"><div><span class="kicker">BROWSE YOUR WAY</span><h2>Shop by category<span>.</span></h2></div><p>Everything your everyday basket needs.</p></div>
+<div class="category-grid">
+  <a class="category-card tall reveal" href="#fresh"><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=700&q=82" alt="Fresh fruits and vegetables"><div><b>🥦 Fresh Produce</b><small>120+ items</small></div><i>↗</i></a>
+  <a class="category-card reveal" href="#products"><img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&w=700&q=82" alt="Dairy and breakfast"><div><b>🥛 Dairy & Breakfast</b><small>80+ items</small></div><i>↗</i></a>
+  <a class="category-card reveal" href="#products"><img src="https://images.unsplash.com/photo-1621939514649-280e2aa742f9?auto=format&fit=crop&w=700&q=82" alt="Snacks and biscuits"><div><b>🍪 Snacks & Biscuits</b><small>160+ items</small></div><i>↗</i></a>
+  <a class="category-card reveal" href="#products"><img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=700&q=82" alt="Beverages"><div><b>🥤 Beverages</b><small>95+ items</small></div><i>↗</i></a>
+  <a class="category-card reveal" href="#products"><img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=700&q=82" alt="Staples and grains"><div><b>🍚 Staples & Grains</b><small>140+ items</small></div><i>↗</i></a>
+  <a class="category-card reveal" href="#products"><img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?auto=format&fit=crop&w=700&q=82" alt="Personal care"><div><b>🧴 Personal Care</b><small>110+ items</small></div><i>↗</i></a>
+  <a class="category-card reveal" href="#products"><img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&w=700&q=82" alt="Household essentials"><div><b>🧹 Household</b><small>100+ items</small></div><i>↗</i></a>
+  <a class="category-card reveal" href="#products"><img src="https://images.unsplash.com/photo-1575377427642-087cf684f29d?auto=format&fit=crop&w=700&q=82" alt="Chocolates and sweets"><div><b>🍫 Chocolates & Sweets</b><small>75+ items</small></div><i>↗</i></a>
+</div></div>
+</section>
+
+<section id="deals" class="section-pad deals-section">
+<div class="container">
+<div class="section-head light reveal"><div><span class="kicker">LIMITED TIME</span><h2>Today's deals<span>.</span></h2></div><div class="deal-timer">ENDS IN <b id="timer">04 : 32 : 18</b></div></div>
+<div class="product-grid" id="dealGrid"></div>
+</div>
+</section>
+
+<section id="products" class="section-pad">
+<div class="container">
+<div class="section-head reveal"><div><span class="kicker">BUILD YOUR BASKET</span><h2>Everything you need, every day<span>.</span></h2></div><p>Simple prices. Simple choices.</p></div>
+<div class="toolbar"><div class="filters"><button class="filter active" data-filter="All">All</button><button class="filter" data-filter="Popular">Popular</button><button class="filter" data-filter="New">New</button><button class="filter" data-filter="Best Deals">Best Deals</button></div><select id="sort"><option>Sort by: Popular</option><option>Price: Low to High</option><option>Price: High to Low</option></select></div>
+<div class="product-grid" id="productGrid"></div><div id="noResults" class="empty hidden">We couldn't find that.<br><small>Try searching for something else.</small></div>
+</div></section>
+
+<section id="fresh" class="fresh-section section-pad"><div class="container">
+<div class="fresh-banner reveal"><div><span class="kicker">JUST LANDED</span><h2>Freshness you can <em>see.</em></h2><p>Picked for your everyday table.</p></div><a href="#products" class="btn btn-dark">SHOP FRESH ↗</a></div>
+<div class="fresh-grid" id="freshGrid"></div>
+</div></section>
+
+<section id="why" class="section-pad"><div class="container">
+<div class="section-head reveal"><div><span class="kicker">THE DAILY KART PROMISE</span><h2>Why shop with us<span>?</span></h2></div></div>
+<div class="features"><article class="feature reveal"><span>🥬</span><h3>Fresh products</h3><p>Quality products for your everyday needs.</p></article><article class="feature reveal"><span>✨</span><h3>Easy shopping</h3><p>Find what you need without the hassle.</p></article><article class="feature reveal"><span>💚</span><h3>Great value</h3><p>Everyday products at everyday prices.</p></article><article class="feature reveal"><span>🚚</span><h3>Reliable delivery</h3><p>Your essentials delivered to your doorstep.</p></article></div>
+</div></section>
+
+<section class="steps-section section-pad"><div class="container">
+<div class="section-head light reveal"><div><span class="kicker">HOW IT WORKS</span><h2>From cart to doorstep<span>.</span></h2></div></div>
+<div class="steps"><div class="step reveal"><b>01</b><span>CHOOSE</span><h3>Find your essentials.</h3><p>Browse fresh produce, pantry staples and daily favourites.</p></div><div class="step reveal"><b>02</b><span>ADD TO KART</span><h3>Build your basket.</h3><p>Tap add and adjust quantities exactly how you want.</p></div><div class="step reveal"><b>03</b><span>RELAX</span><h3>We'll take care of it.</h3><p>Enjoy a simple, reliable delivery experience.</p></div></div>
+</div></section>
+
+<section class="section-pad"><div class="container">
+<div class="offers-head"><div><span class="kicker">SMART SAVINGS</span><h2>Deals made for your home.</h2></div><a href="#deals">VIEW ALL →</a></div>
+<div class="offers"><article><small>LIMITED OFFER</small><strong>₹100 OFF</strong><p>On orders above ₹999</p><a href="#products">SHOP NOW →</a></article><article><small>SNACK TIME</small><strong>BUY 1 GET 1</strong><p>Selected snacks</p><a href="#products">SHOP NOW →</a></article><article><small>FRESH PICKS</small><strong>EXTRA 10% OFF</strong><p>Fresh produce</p><a href="#fresh">SHOP NOW →</a></article></div>
+</div></section>
+
+<section class="section-pad lifestyle"><div class="container life-grid"><div class="life-photo reveal"><img onerror="this.onerror=null;this.src='https://placehold.co/1000x700/eaf2e7/16372a?text=Daily+Kart'" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=85" alt="Groceries in a modern kitchen"><span>LESS TIME SHOPPING.</span></div><div class="life-copy reveal"><span class="kicker">MORE TIME LIVING</span><h2>Life is busy.<br>Grocery shopping <em>doesn't have to be.</em></h2><p>From your morning milk to tonight's dinner ingredients, Daily Kart keeps everyday shopping simple.</p><a href="#products" class="btn btn-primary">MAKE YOUR KART ↗</a></div></div></section>
+
+<section class="section-pad testimonials"><div class="container">
+<div class="section-head reveal"><div><span class="kicker">REAL FEELING, DEMO WORDS</span><h2>What our customers say<span>.</span></h2></div></div>
+<div class="quotes"><article><div>★★★★★</div><p>“Everything I need for the week, without spending an hour at the store.”</p><b>— Rohan</b></article><article><div>★★★★★</div><p>“The interface is so simple. I can finish my grocery shopping in minutes.”</p><b>— Priya</b></article><article><div>★★★★★</div><p>“Fresh products, good prices and an easy ordering experience.”</p><b>— Ananya</b></article></div>
+</div></section>
+
+<section class="section-pad"><div class="container app-banner reveal"><div><span class="kicker">COMING TO YOUR POCKET</span><h2>Your groceries.<br><em>In your pocket.</em></h2><p>Shop your everyday essentials wherever you are.</p><div class="store-buttons"><button onclick="showToast('App Store demo button')"> <span>Download on the<br><b>App Store</b></span></button><button onclick="showToast('Google Play demo button')">▶ <span>GET IT ON<br><b>Google Play</b></span></button></div></div><div class="phone"><div class="phone-notch"></div><div class="phone-top">DAILY <b>KART</b></div><div class="phone-search">⌕ Search groceries</div><div class="phone-card"><img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&w=500&q=80" alt=""><b>Fresh produce</b><small>120+ items</small></div><div class="phone-row"><span>🥛</span><b>Dairy</b><span>→</span></div><div class="phone-row"><span>🍪</span><b>Snacks</b><span>→</span></div></div></div></section>
+
+<section class="section-pad"><div class="container newsletter"><div><span class="kicker">STAY IN THE LOOP</span><h2>Get the best deals in your inbox.</h2><p>Weekly offers, new products and Daily Kart updates.</p></div><form id="newsletter"><input type="email" required placeholder="Enter your email" aria-label="Email"><button>SUBSCRIBE →</button></form></div></section>
+</main>
+
+<footer><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="#home">DAILY<span>KART</span><small>EVERYDAY MADE EASY</small></a><p>Everyday essentials. Made easy.</p><div class="socials"><a href="#">ig</a><a href="#">f</a><a href="#">yt</a></div></div><div><h4>SHOP</h4><a href="#products">Groceries</a><a href="#fresh">Fresh Produce</a><a href="#products">Dairy</a><a href="#products">Snacks</a><a href="#products">Beverages</a></div><div><h4>HELP</h4><a href="#">Contact Us</a><a href="#">FAQs</a><a href="#">Delivery Information</a><a href="#">Returns</a><a href="#">Track Order</a></div><div><h4>COMPANY</h4><a href="#">About Us</a><a href="#">Careers</a><a href="#">Privacy Policy</a><a href="#">Terms</a></div><div><h4>FOLLOW US</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">YouTube</a></div></div><div class="container copyright">© 2026 Daily Kart. All Rights Reserved. <span>Made for a modern everyday.</span></div></footer>
+
+<div id="overlay" class="overlay" onclick="closeCart()"></div>
+<aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart"><div class="drawer-head"><h2>Your Kart <span id="drawerCount">0</span></h2><button onclick="closeCart()">×</button></div><div id="cartItems" class="cart-items"></div><div id="cartSummary"></div></aside>
+<div id="modal" class="modal"><div class="modal-card"><button onclick="closeModal()">×</button><div id="modalBody"></div></div></div>
+<div id="toast" class="toast"></div>
+<div class="mobile-bottom"><button onclick="scrollTo({top:0,behavior:'smooth'})">⌂<small>Home</small></button><button onclick="focusSearch()">⌕<small>Search</small></button><button onclick="showToast('Orders demo interaction')">▣<small>Orders</small></button><button onclick="openCart()">🛒<b id="bottomCount">0</b><small>Cart</small></button><button onclick="showToast('Account demo interaction')">♙<small>Account</small></button></div>
+<script src="script.js"></script>
+</body>
+</html>

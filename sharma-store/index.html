@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sharma Stores — the trust of your neighborhood store, now online. Shop groceries, fresh produce, dairy, snacks and everyday essentials.">
+  <meta name="theme-color" content="#123d2b">
+  <title>Sharma Stores | Your Neighborhood Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar"><span>LOCAL • TRUSTED • FAMILY</span><span>Fresh essentials, delivered locally</span><span>Mon–Sat 8 AM–9 PM</span></div>
+
+  <header class="nav" id="nav">
+    <a href="#home" class="logo"><span class="logo-mark">S</span><span><b>SHARMA STORES</b><small>Your Neighborhood Store</small></span></a>
+    <nav>
+      <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#story">Our Story</a><a href="#offers">Offers</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <button class="nav-icon" id="searchOpen" aria-label="Search">⌕</button>
+      <button class="cart-pill" id="cartOpen">Cart <span id="cartCount">0</span></button>
+      <a href="#shop" class="btn btn-green nav-cta">ORDER NOW</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#story">Our Story</a><a href="#offers">Offers</a><a href="#contact">Contact</a>
+  </div>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span></span> THE STORE YOU ALREADY TRUST</div>
+        <h1>Your local store.<br><em>Now at your doorstep.</em></h1>
+        <p>Everyday groceries, fresh produce and household essentials — from the neighborhood store your family already knows.</p>
+        <div class="hero-buttons"><a class="btn btn-green" href="#shop">SHOP NOW <b>→</b></a><a class="btn btn-cream" href="tel:+910000000000">CALL THE STORE</a></div>
+        <div class="trust-line"><span>✓</span> Honest prices <span>✓</span> Local service <span>✓</span> Easy ordering</div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-photo-wrap">
+          <img src="https://images.pexels.com/photos/9705818/pexels-photo-9705818.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Family shopping for groceries in a store" class="hero-photo">
+          <div class="hero-gradient"></div>
+          <div class="hero-photo-label"><b>GOOD FOOD.</b><span>GOOD NEIGHBORS.</span></div>
+        </div>
+        <div class="float-card float-one"><span class="float-icon">🥬</span><div><b>Fresh every day</b><small>Picked with care</small></div></div>
+        <div class="float-card float-two"><span class="float-icon">🛵</span><div><b>Local delivery</b><small>Right to your door</small></div></div>
+      </div>
+      <div class="hero-marquee"><span>GROCERIES</span><i>✦</i><span>FRESH PRODUCE</span><i>✦</i><span>DAILY ESSENTIALS</span><i>✦</i><span>LOCAL TRUST</span></div>
+    </section>
+
+    <section class="stats">
+      <div><b>20+</b><span>YEARS</span><small>Serving families</small></div>
+      <div><b>1000+</b><span>FAMILIES</span><small>Shopping with us</small></div>
+      <div><b>500+</b><span>PRODUCTS</span><small>For everyday needs</small></div>
+      <div><b>LOCAL</b><span>DELIVERY</span><small>Within our service area</small></div>
+    </section>
+
+    <section class="story section" id="story">
+      <div class="story-photo reveal">
+        <img src="https://images.pexels.com/photos/9706139/pexels-photo-9706139.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Family shopping for fresh groceries">
+        <div class="story-badge"><b>THE SHARMA WAY</b><span>Warm service. Everyday trust.</span></div>
+      </div>
+      <div class="story-copy reveal">
+        <div class="eyebrow"><span></span> MORE THAN A STORE</div>
+        <h2>Some things<br><em>never change.</em></h2>
+        <p class="story-big">The smile at the counter.<br>The familiar faces.<br><strong>The trust.</strong></p>
+        <p>Sharma Stores is built around the simple feeling of knowing your local shop. The same everyday convenience is now easier to access online — without losing the warmth of a neighborhood store.</p>
+        <a class="text-btn" href="#contact">MEET YOUR LOCAL STORE <b>→</b></a>
+      </div>
+    </section>
+
+    <section class="section categories" id="categories">
+      <div class="section-title reveal"><div><div class="eyebrow"><span></span> SHOP BY CATEGORY</div><h2>What are you looking for today?</h2></div><p>Simple categories. No complicated shopping.</p></div>
+      <div class="category-grid" id="categoryGrid"></div>
+    </section>
+
+    <section class="shop section" id="shop">
+      <div class="section-title reveal"><div><div class="eyebrow"><span></span> EVERYDAY FAVORITES</div><h2>Essentials for every home.</h2></div><a class="text-btn" href="#shop">VIEW ALL <b>→</b></a></div>
+      <div class="shop-toolbar">
+        <label class="search-field"><span>⌕</span><input id="searchInput" type="search" placeholder="Search atta, milk, tea..." aria-label="Search products"></label>
+        <select id="categoryFilter" aria-label="Category filter"><option value="all">All categories</option></select>
+        <select id="sortFilter" aria-label="Sort products"><option value="popular">Popular</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p id="emptyState" class="empty" hidden>No products found. Try another search.</p>
+    </section>
+
+    <section class="fresh section">
+      <div class="fresh-copy reveal">
+        <div class="eyebrow"><span></span> FRESH FROM THE MARKET</div>
+        <h2>Fresh food feels like home.</h2>
+        <p>Bring home colorful, everyday produce for the meals your family loves.</p>
+        <a href="#shop" class="btn btn-green">SHOP FRESH PRODUCE →</a>
+      </div>
+      <div class="fresh-photo reveal">
+        <img src="https://images.pexels.com/photos/10521405/pexels-photo-10521405.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Fresh vegetables displayed in a grocery store">
+        <div class="fresh-chip">FRESH<br><small>EVERY MORNING</small></div>
+      </div>
+    </section>
+
+    <section class="offers section" id="offers">
+      <div class="section-title reveal"><div><div class="eyebrow"><span></span> A LITTLE EXTRA</div><h2>Today's special offers.</h2></div></div>
+      <div class="offer-grid">
+        <article class="offer reveal"><small>01 / FAMILY</small><h3>Family Saver</h3><p>Save ₹100 on orders above ₹999.</p><a href="#shop">SHOP ESSENTIALS →</a></article>
+        <article class="offer dark reveal"><small>02 / WEEKEND</small><h3>Weekend Deal</h3><p>Special prices on selected groceries.</p><a href="#shop">SEE PRODUCTS →</a></article>
+        <article class="offer image-offer reveal"><div class="offer-image"></div><div><small>03 / FRESH PICKS</small><h3>Fresh Picks</h3><p>Save on selected fruits & vegetables.</p><a href="#shop">SHOP FRESH →</a></div></article>
+      </div>
+    </section>
+
+    <section class="why section">
+      <div class="center-title reveal"><div class="eyebrow"><span></span> WHY SHARMA STORES?</div><h2>The local difference.</h2></div>
+      <div class="why-grid">
+        <div class="why-card reveal"><div>01</div><h3>Trusted</h3><p>A store you know and trust.</p></div>
+        <div class="why-card reveal"><div>02</div><h3>Fair prices</h3><p>Everyday essentials at honest prices.</p></div>
+        <div class="why-card reveal"><div>03</div><h3>Fresh</h3><p>Carefully selected everyday products.</p></div>
+        <div class="why-card reveal"><div>04</div><h3>Local</h3><p>Your neighborhood store, supporting your community.</p></div>
+      </div>
+    </section>
+
+    <section class="delivery">
+      <div class="delivery-copy reveal"><div class="eyebrow light"><span></span> LOCAL DELIVERY</div><h2>Your groceries.<br><em>Just a short ride away.</em></h2><p>Order online and we'll deliver your everyday essentials within our service area.</p></div>
+      <form id="pinForm" class="pin-card reveal"><label for="pin">CHECK YOUR DELIVERY AREA</label><div><input id="pin" maxlength="6" inputmode="numeric" placeholder="Enter PIN code" required><button class="btn btn-orange">CHECK</button></div><small id="pinResult"></small></form>
+    </section>
+
+    <section class="simple-order section">
+      <div class="order-panel reveal"><span class="order-icon">✦</span><div><div class="eyebrow">PREFER THE SIMPLE WAY?</div><h2>Order your list on WhatsApp.</h2><p>Send us what you need. We'll take care of the rest.</p></div><a class="btn btn-green" href="https://wa.me/?text=Hello%20Sharma%20Stores%2C%20I%20would%20like%20to%20place%20a%20grocery%20order." target="_blank" rel="noopener">ORDER ON WHATSAPP</a></div>
+    </section>
+
+    <section class="gallery section">
+      <div class="section-title reveal"><div><div class="eyebrow"><span></span> A LITTLE LOOK INSIDE</div><h2>Neighborhood, but elevated.</h2></div><p>Real grocery moments. Warm everyday shopping.</p></div>
+      <div class="gallery-grid">
+        <img class="g1 reveal" src="https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Colorful grocery store produce aisle">
+        <img class="g2 reveal" src="https://images.pexels.com/photos/9705818/pexels-photo-9705818.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Family shopping in grocery store">
+        <img class="g3 reveal" src="https://images.pexels.com/photos/10521405/pexels-photo-10521405.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Fresh vegetables in grocery store">
+      </div>
+    </section>
+
+    <section class="testimonials section">
+      <div class="center-title reveal"><div class="eyebrow"><span></span> CUSTOMER LOVE</div><h2>What our customers say.</h2></div>
+      <div class="quotes"><blockquote class="reveal">“We've been shopping here for years. It's nice to finally have the convenience of ordering from home.”<cite>— Neha</cite></blockquote><blockquote class="reveal">“Good prices, familiar service and now online ordering. Makes life much easier.”<cite>— Amit</cite></blockquote><blockquote class="reveal">“Our go-to store for everyday groceries.”<cite>— Priya</cite></blockquote></div>
+      <small class="demo">Demo testimonials — replace with real customer reviews.</small>
+    </section>
+
+    <section class="final-cta">
+      <div class="final-photo"></div><div class="final-copy reveal"><div class="eyebrow light"><span></span> SOME THINGS CHANGE. TRUST DOESN'T.</div><h2>Your neighborhood.<br><em>Your store.</em></h2><p>Everything you need, from a store you already know.</p><a class="btn btn-cream" href="#shop">SHOP NOW</a><a class="btn btn-outline" href="#contact">CONTACT US</a></div>
+    </section>
+
+    <section class="contact section" id="contact">
+      <div class="contact-copy reveal"><div class="eyebrow"><span></span> COME SAY HELLO</div><h2>We're right around the corner.</h2><p>All store information below is demo content and can be replaced easily.</p><div class="contact-details"><div><b>📍 Store</b><span>123 Main Market, Your Neighborhood, India</span></div><div><b>☎ Phone</b><span>+91 00000 00000</span></div><div><b>◔ WhatsApp</b><span>Order with us on WhatsApp</span></div><div><b>✉ Email</b><span>hello@sharmastores.demo</span></div></div></div>
+      <div class="hours reveal"><h3>Opening hours</h3><p>Monday – Saturday <b>8:00 AM – 9:00 PM</b></p><p>Sunday <b>9:00 AM – 8:00 PM</b></p><div class="map">📍<span>Map placeholder<br><small>Replace with your Google Maps embed</small></span></div><a class="text-btn" href="https://www.google.com/maps" target="_blank" rel="noopener">GET DIRECTIONS →</a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><a href="#home" class="logo"><span class="logo-mark">S</span><span><b>SHARMA STORES</b><small>Your Neighborhood Store, Now Online.</small></span></a><p>The trust of your neighborhood store, now online.</p></div>
+    <div><h4>SHOP</h4><a href="#shop">Groceries</a><a href="#fresh">Fresh Produce</a><a href="#shop">Dairy</a><a href="#shop">Snacks</a></div>
+    <div><h4>CUSTOMER</h4><a href="#shop">My Account</a><a href="#contact">Track Order</a><a href="#contact">Delivery</a><a href="#contact">Contact</a></div>
+    <div><h4>STORE</h4><a href="#story">About Us</a><a href="#offers">Offers</a><a href="#contact">Location</a><a href="#contact">Hours</a></div>
+    <div><h4>CONNECT</h4><a href="https://wa.me/?text=Hello%20Sharma%20Stores" target="_blank">WhatsApp</a><a href="#">Instagram</a><a href="#">Facebook</a></div>
+    <div class="copyright">© 2026 Sharma Stores. All Rights Reserved. <span>Demo website for portfolio use.</span></div>
+  </footer>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="drawer-head"><div><small>SHOPPING</small><h2>Your cart</h2></div><button id="cartClose">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-bottom"><div class="line"><span>Subtotal</span><b id="subtotal">₹0</b></div><div class="line"><span>Delivery</span><b id="delivery">FREE</b></div><div class="line total"><span>Total</span><b id="total">₹0</b></div><div class="progress"><span id="progressBar"></span></div><small id="freeText">Add ₹999 more for FREE delivery</small><button id="checkoutBtn" class="btn btn-green full">PLACE ORDER</button></div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <dialog class="modal" id="productModal"><button class="modal-x" onclick="productModal.close()">×</button><div id="modalContent"></div></dialog>
+  <dialog class="modal" id="checkoutModal"><button class="modal-x" onclick="checkoutModal.close()">×</button><div id="checkoutContent"></div></dialog>
+
+  <nav class="bottom-nav"><a href="#home">⌂<small>Home</small></a><a href="#shop">▣<small>Shop</small></a><button id="mobileSearch">⌕<small>Search</small></button><button id="mobileCart">🛒<small>Cart</small><b id="mobileCartCount">0</b></button><button id="mobileMenuBtn">☰<small>More</small></button></nav>
+  <script src="script.js"></script>
+</body>
+</html>
