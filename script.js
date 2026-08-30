@@ -162,9 +162,10 @@ document.querySelector('.contact-form').addEventListener('submit',async e=>{
     if(!res.ok) throw new Error(result.detail||'Unable to send enquiry.');
     form.reset();
     note.textContent='Thanks! Your enquiry has been received. We’ll get back to you soon.';
-  }catch(err){
-    note.textContent='Could not send right now. Please contact us directly on WhatsApp or email.';
-  }finally{
+  }}catch(err){
+  console.error('FORM ERROR:', err);
+  note.textContent='ERROR: ' + err.message;
+}finally{
     button.disabled=false;
     button.innerHTML="Let's Talk <span>↗</span>";
   }
