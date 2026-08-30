@@ -162,10 +162,17 @@ document.querySelector('.contact-form').addEventListener('submit',async e=>{
     if(!res.ok) throw new Error(result.detail||'Unable to send enquiry.');
     form.reset();
     note.textContent='Thanks! Your enquiry has been received. We’ll get back to you soon.';
+<<<<<<< HEAD
   }}catch(err){
   console.error('FORM ERROR:', err);
   note.textContent='ERROR: ' + err.message;
 }finally{
+=======
+  }catch(err){
+  console.error('FORM ERROR:', err);
+  note.textContent='ERROR: ' + err.message; 
+  }finally{
+>>>>>>> aaa2b7c (Connect contact form to Render)  
     button.disabled=false;
     button.innerHTML="Let's Talk <span>↗</span>";
   }
