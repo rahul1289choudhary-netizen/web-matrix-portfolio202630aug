@@ -2,7 +2,7 @@ const projects = [
   {number:"01",category:"Concept Website",name:"Brew & Bean",line:"Good coffee deserves a good first impression.",image:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85",url:"brew-and-bean/index.html"},
   {number:"02",category:"Concept Website",name:"Forge Fitness",line:"People don't just join a gym. They join the person they want to become.",image:"https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1400&q=85",url:"Forge-fitness/index.html"},
   {number:"03",category:"Concept Website",name:"Aura Studio",line:"Before they book you, they're already judging your brand.",image:"https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1400&q=85",url:"Aura-studio/index.html"},
-  {number:"04",category:"Concept Website",name:"DailyKart",line:"Everything you need, closer to home.",image:"https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85",url:"daily-Kart/index.html"},
+  {number:"04",category:"Concept Website",name:"DailyKart",line:"Everything you need, closer to home.",image:"https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=85",url:"daily-kart/index.html"},
   {number:"05",category:"Concept Website",name:"Sharma Stores",line:"Your neighbourhood. Your trusted store.",image:"https://images.unsplash.com/photo-1604719312566-8912e9227c6a?auto=format&fit=crop&w=1400&q=85",url:"sharma-store/index.html"},
   {number:"06",category:"Concept Website",name:"Northline",line:"People don't just buy clothes. They buy how they feel wearing them.",image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=85",url:"northline/index.html"}
 ];
