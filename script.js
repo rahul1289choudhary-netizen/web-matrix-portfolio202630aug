@@ -152,7 +152,7 @@ document.querySelector('.contact-form').addEventListener('submit',async e=>{
   const button=form.querySelector('button[type=submit]');
   const note=form.querySelector('.form-note');
   const data=Object.fromEntries(new FormData(form).entries());
-  const apiBase=window.WEBMATRIX_API_URL||'http://127.0.0.1:8000';
+  const apiBase='https://web-matrix-backend.onrender.com';
   button.disabled=true;
   button.innerHTML='Sending <span>…</span>';
   note.textContent='Sending your project enquiry…';
