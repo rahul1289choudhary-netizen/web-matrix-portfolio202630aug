@@ -160,19 +160,12 @@ document.querySelector('.contact-form').addEventListener('submit',async e=>{
     const res=await fetch(`${apiBase}/api/leads`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)});
     const result=await res.json();
     if(!res.ok) throw new Error(result.detail||'Unable to send enquiry.');
-    form.reset();
+       form.reset();
     note.textContent='Thanks! Your enquiry has been received. We’ll get back to you soon.';
-<<<<<<< HEAD
-  }}catch(err){
-  console.error('FORM ERROR:', err);
-  note.textContent='ERROR: ' + err.message;
-}finally{
-=======
   }catch(err){
-  console.error('FORM ERROR:', err);
-  note.textContent='ERROR: ' + err.message; 
+    console.error('FORM ERROR:', err);
+    note.textContent='ERROR: ' + err.message;
   }finally{
->>>>>>> aaa2b7c (Connect contact form to Render)  
     button.disabled=false;
     button.innerHTML="Let's Talk <span>↗</span>";
   }
